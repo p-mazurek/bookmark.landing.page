@@ -1,153 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
-    <meta name="description" content="Your project description" />
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta
-      property="og:image"
-      content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
-    />
 
-    <!-- uncomment the line below to enable PWA  -->
-    <!-- <link rel="manifest" href="manifest.json" /> -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WTF: Webpack starter kit</title>
+</head>
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="pwa/apple-icon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="167x167"
-      href="pwa/apple-icon-167.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="pwa/apple-icon-152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="pwa/apple-icon-120.png"
-    />
+<body>
+  <main class="main">
+    <header class="head">
+      <div class="head__panel">
+        <img src="../assets/icons/logo-bookmark.svg" alt="Bookmark's logo" class="head__logo">
+        <button class="hamburger hamburger--js">
+          <span class="hamburger__inner"></span>
+        </button>
+        <div class="head__nav-mobile nav-mobile--js">
+          <img src="../assets/icons/logo-bookmark-white.svg" alt="Bookmark's logo"
+            class="head__logo head__logo--active">
+          <button class="head__hamburger hamburger-deactive--js"></button>
+          <nav class="navigation--mobile">
+            <a href="#features" class="navigation__item navigation__item--mobile">Features</a>
+            <a href="#download" class="navigation__item navigation__item--mobile">Pricing</a>
+            <a href="#contact" class="navigation__item navigation__item--mobile">Contact</a>
+            <a href="#" class="navigation__item navigation__item--special navigation__item--mobile">Login</a>
+          </nav>
+          <div class="social">
+            <a href="facebook.com" class="social__link"><img src="../assets/icons/icon-facebook.svg" alt="Facebook icon"
+                class="social__icon"></a>
+            <a href="twitter.com" class="social__link"><img src="../assets/icons/icon-twitter.svg" alt="Twitter icon"
+                class="social__icon"></a>
+          </div>
+        </div>
+        <nav class="navigation">
+          <a href="#" class="navigation__item">Features</a>
+          <a href="#" class="navigation__item">Pricing</a>
+          <a href="#" class="navigation__item">Contact</a>
+          <a href="#" class="navigation__item navigation__item--special">Login</a>
+        </nav>
+      </div>
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+      <div class="background"></div>
+      <div class="hero" id="hero">
+        <h1 class="hero__title">A Simple Bookmark Manager</h1>
+        <p class="hero__description">A clean and simple interface to organize your favourite websites. Open a new
+          browser tab and see your sites load instantly. Try it for free.</p>
+        <div class="hero__download-links">
+          <a href="#" class="hero__download">Get it on Chrome</a>
+          <a href="#" class="hero__download hero__download--inactive">Get it on Firefox</a>
+        </div>
+      </div>
+    </header>
 
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-2732.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2732-2048.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2388.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2388-1668.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2224.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2224-1668.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1536-2048.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-1536.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2688.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2688-1242.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1125-2436.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2436-1125.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-828-1792.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1792-828.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2208.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2208-1242.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-750-1334.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1334-750.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-640-1136.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1136-640.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-  </head>
-  <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
-    </div>
-  </body>
+    <section class="features" id="features">
+      <h2 class="features__title">Features</h2>
+      <p class="features__description">Our aim is to make it quick and easy for you to access your favourite websites.
+        Your bookmarks sync between your devices so you can access them on the go.</p>
+      <div class="tab-list">
+        <button class="tab-list__item button--js" data-target="#content-1">Simple Bookmarking
+          <span class="tab-list__line tab-list__line--active"></span>
+        </button>
+        <button class="tab-list__item button--js" data-target="#content-2">Speedy Searchings <span
+            class="tab-list__line"></span></button>
+        <button class="tab-list__item button--js" data-target="#content-3">Easy Sharing<span
+            class="tab-list__line"></span></button>
+      </div>
+
+      <article class="tab tab--active" id="content-1">
+        <div class="tab__background"></div>
+        <h3 class="tab__title">Bookmark on one click</h3>
+        <p class="tab__description">Organize your bookmarks however you like. Our simple drag-and-drop interface
+          gives you complete control over how you manage your favourite sites.</p>
+        <a href="#" class="tab__link">More info</a>
+      </article>
+      <article class="tab tab--hidden" id="content-2">
+        <div class="tab__background"></div>
+        <h3 class="tab__title">Intelligent search</h3>
+        <p class="tab__description">Our powerful search feature will help you find saved sites in no time at all.
+          No need to trawl through all of your bookmarks.</p>
+        <a href="#" class="tab__link">More info</a>
+      </article>
+      <article class="tab tab--hidden" id="content-3">
+        <div class="tab__background"></div>
+        <h3 class="tab__title">Share your bookmarks</h3>
+        <p class="tab__description"> Easily share your bookmarks and collections with others. Create a shareable
+          link that you can send at the click of a button.</p>
+        <a href="#" class="tab__link">More info</a>
+      </article>
+
+    </section>
+
+    <section class="download" id="download">
+      <h2 class="download__title">Download the extension</h2>
+      <p class="download__description">We’ve got more browsers in the pipeline. Please do let us know if you’ve
+        got a favourite you’d like us to prioritize.</p>
+      <div class="browsers">
+        <div class="card">
+          <img src="../assets/icons/logo-chrome.svg" alt="Chrome's logo" class="card__logo">
+          <h3 class="card__title">Add to Chrome</h3>
+          <p class="card__info">Minimum version 62</p>
+          <span class="card__dots"></span>
+          <a href="#" class="card__link">Add & Install Extension</a>
+        </div>
+        <div class="card">
+          <img src="../assets/icons/logo-firefox.svg" alt="Firefox's logo" class=card__logo">
+          <h3 class="card__title">Add to Firefox</h3>
+          <p class="card__info">Minimum version 55</p>
+          <span class="card__dots"></span>
+          <a href="#" class="card__link">Add & Install Extension</a>
+        </div>
+        <div class="card">
+          <img src="../assets/icons/logo-opera.svg" alt="Opera's logo" class="card__logo">
+          <h3 class="card__title">Add to Opera</h3>
+          <p class="card__info">Minimum version 46</p>
+          <span class="card__dots"></span>
+          <a href="#" class="card__link">Add & Install Extension</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2 class="faq__title">Frequently Asked Questions</h2>
+      <p class="faq__description">Here are some of our FAQs. If you have any other questions you’d like
+        answered please feel free to email us.</p>
+      <article class="questions">
+        <div class="question-box">
+          <h3 class="question-box__question">What is Bookmark?<span class="question-box__arrow"></span></h3>
+          <p class="question-box__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+            justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+        </div>
+        <div class="question-box">
+          <h3 class="question-box__question">How can I request a new browser?<span class="question-box__arrow"></span>
+          </h3>
+          <p class="question-box__answer">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies
+            non ligula.
+            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+        </div>
+        <div class="question-box">
+          <h3 class="question-box__question">Is there a mobile app?<span class="question-box__arrow"></span></h3>
+          <p class="question-box__answer">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum
+            dolor, ut condimentum
+            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+            sollicitudin ex et ultricies bibendum.</p>
+        </div>
+        <div class="question-box">
+          <h3 class="question-box__question">What about other Chromium browsers?<span
+              class="question-box__arrow"></span>
+          </h3>
+          <p class="question-box__answer">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at
+            euismod dui. Aliquam
+            vitae neque eget nisl gravida pellentesque non ut velit.</p>
+        </div>
+        <a href="#" class="faq__link">More info</a>
+      </article>
+    </section>
+
+    <section class="contact" id="contact">
+      <p class="contact__joined">35,000 + Already Joined</p>
+      <h2 class="contact__title">Stay up-to-date with what we’re doing</h2>
+      <form action="get" class="form">
+        <label class="form__label" for="mail">
+          <input type="email" name="mail" id="mail" class="form__input" required placeholder="your email address">
+        </label>
+        <button class="form__button" type="submit">Contact Us</button>
+      </form>
+    </section>
+
+
+    <footer class="footer">
+      <div class="footer__panel">
+        <img src="../assets/icons/logo-bookmark-white.svg" alt="Bookmark's logo" class="footer__logo">
+        <a href="#" class="footer__link">Features</a>
+        <a href="#" class="footer__link">Pricing</a>
+        <a href="#" class="footer__link">Contact</a>
+      </div>
+      <div class="social">
+        <a href="facebook.com" class="social__link"><img src="../assets/icons/icon-facebook.svg" alt="Facebook icon"
+            class="social__icon"></a>
+        <a href="twitter.com" class="social__link"><img src="../assets/icons/icon-twitter.svg" alt="Twitter icon"
+            class="social__icon"></a>
+      </div>
+    </footer>
+  </main>
+</body>
+
 </html>
