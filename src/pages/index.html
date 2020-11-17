@@ -40,7 +40,9 @@
         </nav>
       </div>
 
-      <div class="background"></div>
+      <div class="background">
+
+      </div>
       <div class="hero" id="hero">
         <h1 class="hero__title">A Simple Bookmark Manager</h1>
         <p class="hero__description">A clean and simple interface to organize your favourite websites. Open a new
@@ -67,25 +69,32 @@
       </div>
 
       <article class="tab tab--active" id="content-1">
-        <div class="tab__background"></div>
-        <h3 class="tab__title">Bookmark on one click</h3>
-        <p class="tab__description">Organize your bookmarks however you like. Our simple drag-and-drop interface
-          gives you complete control over how you manage your favourite sites.</p>
-        <a href="#" class="tab__link">More info</a>
+        <div class="tab__background tab__background--first"></div>
+        <div class="tab__flex">
+          <h3 class="tab__title">Bookmark on one click</h3>
+          <p class="tab__description">Organize your bookmarks however you like. Our simple drag-and-drop interface
+            gives you complete control over how you manage your favourite sites.</p>
+          <a href="#" class="tab__link">More info</a>
+        </div>
       </article>
       <article class="tab tab--hidden" id="content-2">
-        <div class="tab__background"></div>
-        <h3 class="tab__title">Intelligent search</h3>
-        <p class="tab__description">Our powerful search feature will help you find saved sites in no time at all.
-          No need to trawl through all of your bookmarks.</p>
-        <a href="#" class="tab__link">More info</a>
+        <div class="tab__background tab__background--second"></div>
+        <div class="tab__flex">
+          <h3 class="tab__title">Intelligent search</h3>
+          <p class="tab__description">Our powerful search feature will help you find saved sites in no time at all.
+            No need to trawl through all of your bookmarks.</p>
+          <a href="#" class="tab__link">More info</a>
+        </div>
+
       </article>
       <article class="tab tab--hidden" id="content-3">
-        <div class="tab__background"></div>
-        <h3 class="tab__title">Share your bookmarks</h3>
-        <p class="tab__description"> Easily share your bookmarks and collections with others. Create a shareable
-          link that you can send at the click of a button.</p>
-        <a href="#" class="tab__link">More info</a>
+        <div class="tab__background tab__background--third"></div>
+        <div class="tab__flex">
+          <h3 class="tab__title">Share your bookmarks</h3>
+          <p class="tab__description"> Easily share your bookmarks and collections with others. Create a shareable
+            link that you can send at the click of a button.</p>
+          <a href="#" class="tab__link">More info</a>
+        </div>
       </article>
 
     </section>
@@ -102,14 +111,14 @@
           <span class="card__dots"></span>
           <a href="#" class="card__link">Add & Install Extension</a>
         </div>
-        <div class="card">
+        <div class="card card--second">
           <img src="../assets/icons/logo-firefox.svg" alt="Firefox's logo" class=card__logo">
           <h3 class="card__title">Add to Firefox</h3>
           <p class="card__info">Minimum version 55</p>
           <span class="card__dots"></span>
           <a href="#" class="card__link">Add & Install Extension</a>
         </div>
-        <div class="card">
+        <div class="card card--third">
           <img src="../assets/icons/logo-opera.svg" alt="Opera's logo" class="card__logo">
           <h3 class="card__title">Add to Opera</h3>
           <p class="card__info">Minimum version 46</p>
@@ -125,31 +134,31 @@
         answered please feel free to email us.</p>
       <article class="questions">
         <div class="question-box">
-          <h3 class="question-box__question">What is Bookmark?<span class="question-box__arrow"></span></h3>
-          <p class="question-box__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+          <h3 class="question-box__question">What is Bookmark?<span class="question-box__arrow arrow--js" data-number="#answer-1"></span></h3>
+          <p class="question-box__answer answer--js" id="answer-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
             justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
         </div>
         <div class="question-box">
-          <h3 class="question-box__question">How can I request a new browser?<span class="question-box__arrow"></span>
+          <h3 class="question-box__question">How can I request a new browser?<span class="question-box__arrow arrow--js" data-number ="#answer-2"></span>
           </h3>
-          <p class="question-box__answer">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies
+          <p class="question-box__answer answer--js" id="answer-2">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies
             non ligula.
             Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
             ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
             Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
         </div>
         <div class="question-box">
-          <h3 class="question-box__question">Is there a mobile app?<span class="question-box__arrow"></span></h3>
-          <p class="question-box__answer">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum
+          <h3 class="question-box__question">Is there a mobile app?<span class="question-box__arrow arrow--js" data-number ="#answer-3"></span></h3>
+          <p class="question-box__answer answer--js" id="answer-3">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum
             dolor, ut condimentum
             urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
             sollicitudin ex et ultricies bibendum.</p>
         </div>
         <div class="question-box">
           <h3 class="question-box__question">What about other Chromium browsers?<span
-              class="question-box__arrow"></span>
+              class="question-box__arrow arrow--js" data-number="#answer-4"></span>
           </h3>
-          <p class="question-box__answer">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at
+          <p class="question-box__answer answer--js" id="answer-4">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at
             euismod dui. Aliquam
             vitae neque eget nisl gravida pellentesque non ut velit.</p>
         </div>

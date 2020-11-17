@@ -2,6 +2,14 @@
   padding: 50px;
   background-color: rgb(36, 41, 70);
   background-color: #242a45;
+  @media (min-width: $tablet) {
+    padding: 30px 60px 40px 60px;
+  }
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    line-height:60px;
+  }
   &__link {
     text-decoration: none;
     color: white;
@@ -9,26 +17,44 @@
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 30px;
+    &:hover {
+      color: rgb(214, 62, 16);
+      transition: 0.2s all ease-in-out;
+    }
   }
   &__logo {
     margin-bottom: 30px;
     display: block;
     width: 200px;
+    margin-left: -40px;
+    cursor: pointer;
   }
   &__panel {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: space-around;
+      max-width: 60vw;
+    }
   }
 }
-.social{
-    margin: 0 auto;
-    text-align: center;
-    &__icon {
-        padding: 20px;
-        display: inline-block;
-        width: 30px;
+.social {
+  margin: 20px auto;
+  text-align: center;
 
+  @media (min-width: 1024px) {
+    margin: 0 auto;
+  }
+  &__icon {
+    padding: 0 20px;
+    display: inline-block;
+    width: 30px;
+    &:hover {
+      transform: rotate(360deg);
+      transition: 0.5s all ease-in-out;
     }
+  }
 }

@@ -1,12 +1,16 @@
 .features {
   text-align: center;
-  padding: 0 0 120px 0;
+  padding: 50px 0 120px 0;
 
   &__description {
     padding: 0 20px;
     color: $description-color;
     margin-bottom: 50px;
     line-height: 25px;
+    @media (min-width: $tablet) {
+      max-width: 420px;
+      margin: 0 auto 30px auto;
+    }
   }
 
   &__title {
@@ -19,31 +23,69 @@
 
 .tab {
   display: none;
+  &__flex {
+    @media (min-width: 768px) {
+      text-align: left;
+
+    }
+  }
 
   &__background {
-    width: 100%;
-    max-width: 330px;
+    width: 80%;
+    margin: 0 auto;
     height: 300px;
-    background: url(../assets/icons/illustration-hero.svg) center no-repeat;
-    background-size: contain;
     position: relative;
-    overflow: hidden;
+
+    @media (min-width: $tablet) {
+      max-width: 400px;
+    }
+    @media (min-width: 768px) {
+      margin-left: 20px;
+    }
+
+    &--first {
+      background: url(/src/assets/icons/illustration-features-tab-1.svg) center
+        no-repeat;
+      background-size: contain;
+    }
+    &--second {
+      background: url(/src/assets/icons/illustration-features-tab-2.svg) center
+        no-repeat;
+      background-size: contain;
+    }
+    &--third {
+      background: url(/src/assets/icons/illustration-features-tab-3.svg) center
+        no-repeat;
+      background-size: contain;
+    }
 
     &::before {
       content: "";
       position: absolute;
       bottom: 20px;
-      left: 0;
+      left: -15%;
       width: 250px;
       height: 180px;
       border-radius: 0 0 50% 0;
       background-color: hsl(231, 69%, 60%);
       z-index: -1;
+      @media (min-width: $tablet) {
+        display: none;
+      }
     }
   }
 
   &--active {
     display: block;
+    @media (min-width: 768px) {
+      display: flex;
+      max-width: 1024px;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 15px;
+    }
   }
 
   &__description {
@@ -51,10 +93,33 @@
     color: $description-color;
     margin-bottom: 50px;
     line-height: 25px;
+    @media (min-width: $tablet) {
+      max-width: 420px;
+      margin: 0 auto 30px auto;
+    }
   }
 
   &__link {
     display: none;
+    @media (min-width: 768px) {
+      display: block;
+      width: 100px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      padding: 20px;
+      background-color: $btn-background;
+      border-radius: 10px;
+      text-align: center;
+      margin: 20px;
+      cursor: pointer;
+      &:hover {
+        background-color: #fff;
+        color: $btn-background;
+        border: 2px solid $btn-background;
+        transition: .2s all ease-in-out;
+      }
+    }
   }
 
   &__title {
@@ -70,6 +135,17 @@
   margin: 0 auto;
   padding: 0 20px;
   list-style-type: none;
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
 
   &__line {
     position: absolute;
@@ -90,6 +166,12 @@
     width: 200px;
     background-color: transparent;
     overflow: hidden;
+    @media (min-width: 768px) {
+      margin: 0 10px;
+      border-top: 1px solid rgb(194, 193, 193);
+      border-bottom: 1px solid rgb(194, 193, 193);
+    }
+
     &:focus > .tab-list__line {
       position: absolute;
       display: block;
