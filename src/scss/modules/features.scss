@@ -7,6 +7,7 @@
     color: $description-color;
     margin-bottom: 50px;
     line-height: 25px;
+
     @media (min-width: $tablet) {
       max-width: 420px;
       margin: 0 auto 30px auto;
@@ -23,6 +24,7 @@
 
 .tab {
   display: none;
+
   &__flex {
     @media (min-width: 768px) {
       text-align: left;
@@ -39,23 +41,23 @@
     @media (min-width: $tablet) {
       max-width: 400px;
     }
+
     @media (min-width: 768px) {
       margin-left: 20px;
     }
 
     &--first {
-      background: url(/src/assets/icons/illustration-features-tab-1.svg) center
-        no-repeat;
+      background: url(/src/assets/icons/illustration-features-tab-1.svg) center no-repeat;
       background-size: contain;
     }
+
     &--second {
-      background: url(/src/assets/icons/illustration-features-tab-2.svg) center
-        no-repeat;
+      background: url(/src/assets/icons/illustration-features-tab-2.svg) center no-repeat;
       background-size: contain;
     }
+
     &--third {
-      background: url(/src/assets/icons/illustration-features-tab-3.svg) center
-        no-repeat;
+      background: url(/src/assets/icons/illustration-features-tab-3.svg) center no-repeat;
       background-size: contain;
     }
 
@@ -69,6 +71,7 @@
       border-radius: 0 0 50% 0;
       background-color: hsl(231, 69%, 60%);
       z-index: -1;
+
       @media (min-width: $tablet) {
         display: none;
       }
@@ -77,6 +80,7 @@
 
   &--active {
     display: block;
+
     @media (min-width: 768px) {
       display: flex;
       max-width: 1024px;
@@ -93,6 +97,7 @@
     color: $description-color;
     margin-bottom: 50px;
     line-height: 25px;
+
     @media (min-width: $tablet) {
       max-width: 420px;
       margin: 0 auto 30px auto;
@@ -101,6 +106,7 @@
 
   &__link {
     display: none;
+
     @media (min-width: 768px) {
       display: block;
       width: 100px;
@@ -113,6 +119,7 @@
       text-align: center;
       margin: 20px;
       cursor: pointer;
+
       &:hover {
         background-color: #fff;
         color: $btn-background;
@@ -135,6 +142,7 @@
   margin: 0 auto;
   padding: 0 20px;
   list-style-type: none;
+
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
@@ -142,6 +150,7 @@
     justify-content: center;
     margin-bottom: 30px;
   }
+
   @media (min-width: 768px) {
     flex-direction: row;
     margin-bottom: 30px;
@@ -166,13 +175,15 @@
     width: 200px;
     background-color: transparent;
     overflow: hidden;
+    cursor: pointer;
+
     @media (min-width: 768px) {
       margin: 0 10px;
       border-top: 1px solid rgb(194, 193, 193);
       border-bottom: 1px solid rgb(194, 193, 193);
     }
 
-    &:focus > .tab-list__line {
+    &:focus>.tab-list__line {
       position: absolute;
       display: block;
       width: 150px;
